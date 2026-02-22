@@ -20,8 +20,8 @@ void rotate_canvas(lv_obj_t *canvas, lv_color_t cbuf[]) {
 
   lv_canvas_fill_bg(canvas, LVGL_BACKGROUND, LV_OPA_COVER);
 #if IS_ENABLED(CONFIG_NICE_EPAPER_ON)
-  // For epaper (vertical portrait), no rotation needed
-  lv_canvas_transform(canvas, &img, 0, LV_IMG_ZOOM_NONE, -1, 0,
+  // For epaper (vertical portrait), rotate 180 degrees to flip upside down content
+  lv_canvas_transform(canvas, &img, 1800, LV_IMG_ZOOM_NONE, -1, 0,
                       CANVAS_HEIGHT / 2, CANVAS_HEIGHT / 2, true);
 #else
   // For oled (horizontal), rotate 90 degrees
