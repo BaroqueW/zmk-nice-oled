@@ -21,7 +21,7 @@ void rotate_canvas(lv_obj_t *canvas, lv_color_t cbuf[]) {
   lv_canvas_fill_bg(canvas, LVGL_BACKGROUND, LV_OPA_COVER);
 #if IS_ENABLED(CONFIG_NICE_EPAPER_ON)
   // For epaper (vertical portrait), rotate 90 degrees CCW so widgets align
-  lv_canvas_transform(canvas, &img, 2700, LV_IMG_ZOOM_NONE, -1, 0,
+  lv_canvas_transform(canvas, &img, 900, LV_IMG_ZOOM_NONE, -1, 0,
                       CANVAS_HEIGHT / 2, CANVAS_HEIGHT / 2, true);
 #else
   // For oled (horizontal), rotate 90 degrees
