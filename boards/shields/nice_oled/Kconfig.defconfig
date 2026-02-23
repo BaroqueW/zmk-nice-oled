@@ -80,6 +80,9 @@ config NICE_OLED_WIDGET_STATUS
 config NICE_OLED_WIDGET_INVERTED
     bool "Invert display colors"
 
+config NICE_OLED_ROTATE_180
+    bool "Rotate screen 180 degrees"
+
 ### GENERAL CONFIG END  }}}
 ### WIDGET ON CENTRAL AND PERIPHERAL START {{{
 config NICE_OLED_WIDGET_OUTPUT_BACKGROUND
